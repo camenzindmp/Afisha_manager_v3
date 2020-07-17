@@ -6,7 +6,7 @@ public class CartManager {
   private PurchaseItem[] items = new PurchaseItem[0];
 
   public void add(PurchaseItem item) {
-    // создаём новый массив размером на единицу больше
+    // создаём новый массив размером на единицу больше!
     int length = items.length + 1;
     PurchaseItem[] tmp = new PurchaseItem[length];
     // itar + tab
