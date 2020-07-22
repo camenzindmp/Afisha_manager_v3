@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/afisha_manager.iml" filepath="$PROJECT_DIR$/.idea/afisha_manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/cart/cart.iml" filepath="$PROJECT_DIR$/cart/cart.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cart-with-mocks/cart-with-mocks.iml" filepath="$PROJECT_DIR$/cart-with-mocks/cart-with-mocks.iml" />
     </modules>
   </component>
 </project>
