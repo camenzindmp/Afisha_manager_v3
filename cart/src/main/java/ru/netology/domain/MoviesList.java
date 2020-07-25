@@ -12,6 +12,16 @@ import lombok.NoArgsConstructor;
 public class MoviesList {
     private int movieId;
     private String movieName;
-    private int quantityInFeed;
+    private int quantityInFeed = 10;
+
+    public MoviesList(int quantityInFeed) {
+        this.quantityInFeed = quantityInFeed;
+    }
+
+    public MoviesList(int movieId, String movieName) {
+        this.movieId = movieId;
+        this.movieName = movieName;
+
+    }
 }
 

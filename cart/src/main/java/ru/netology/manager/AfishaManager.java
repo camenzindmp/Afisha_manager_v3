@@ -17,7 +17,7 @@ public class AfishaManager {
         movies = tmp;
     }
 
-    private MoviesList[] getMovies() {
+    MoviesList[] getMovies() {
         MoviesList[] result = new MoviesList[movies.length];
         for (int i = 0; i < result.length; i++) {
             int index = movies.length - i - 1;
