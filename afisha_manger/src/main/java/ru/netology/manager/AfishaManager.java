@@ -5,7 +5,13 @@ import ru.netology.domain.MoviesList;
 public class AfishaManager {
     private MoviesList[] movies = new MoviesList[0];
 
-    public void addMovie(MoviesList movie) {
+    private int quantityInFeed = 10;
+
+    public AfishaManager(int quantityInFeed) {
+        this.quantityInFeed = quantityInFeed;
+    }
+
+    public void add(MoviesList movie) {
         int length = movies.length + 1;
         MoviesList[] tmp = new MoviesList[length];
         //for (int i = 0; i < movies.length; i++) {
