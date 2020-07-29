@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/afisha_manager.iml" filepath="$PROJECT_DIR$/.idea/afisha_manager.iml" />
-      <module fileurl="file://$PROJECT_DIR$/afisha_manger/cart.iml" filepath="$PROJECT_DIR$/afisha_manger/cart.iml" />
     </modules>
   </component>
 </project>

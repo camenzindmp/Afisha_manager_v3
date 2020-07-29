@@ -55,7 +55,27 @@ public class AfishaManagerTest {
         manager.add(tenth);
 
         MoviesList[] actual = manager.getMovies();
-        MoviesList[] expected = new MoviesList[]{tenth, ninth, eighth, seventh, sixth};
+        MoviesList[] expected = new MoviesList[]{fifth, fourth, third, second, first};
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void getZeroMovies() {
+        AfishaManager manager = new AfishaManager(0);
+        manager.add(first);
+        manager.add(second);
+        manager.add(third);
+        manager.add(fourth);
+        manager.add(fifth);
+        manager.add(sixth);
+        manager.add(seventh);
+        manager.add(eighth);
+        manager.add(ninth);
+        manager.add(tenth);
+
+        MoviesList[] actual = manager.getMovies();
+        MoviesList[] expected = new MoviesList[]{};
 
         assertArrayEquals(expected, actual);
     }
@@ -74,7 +94,7 @@ public class AfishaManagerTest {
         manager.add(ninth);
         manager.add(tenth);
 
-        MoviesList[] actual = manager.getMovies();
+        MoviesList[] actual = new MoviesList[]{tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
         MoviesList[] expected = new MoviesList[]{tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
 
         assertArrayEquals(expected, actual);
@@ -94,7 +114,7 @@ public class AfishaManagerTest {
         manager.add(ninth);
         manager.add(tenth);
 
-        MoviesList[] actual = manager.getMovies();
+        MoviesList[] actual = new MoviesList[]{tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
         MoviesList[] expected = new MoviesList[]{tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
 
         assertArrayEquals(expected, actual);
