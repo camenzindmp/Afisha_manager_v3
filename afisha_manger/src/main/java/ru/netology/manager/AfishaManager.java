@@ -1,15 +1,21 @@
 package ru.netology.manager;
 
+import ru.netology.domain.AfishaRepository;
 import ru.netology.domain.MoviesList;
 
 public class AfishaManager {
     private MoviesList[] movies = new MoviesList[0];
+    private AfishaRepository repository;
 
-    private int quantityInFeed = 10;
+    public AfishaManager(AfishaRepository repository) {
+        this.repository = repository;
+    }
 
     public AfishaManager(int quantityInFeed) {
         this.quantityInFeed = quantityInFeed;
     }
+
+    private int quantityInFeed = 10;
 
     public void add(MoviesList movie) {
         int length = movies.length + 1;
