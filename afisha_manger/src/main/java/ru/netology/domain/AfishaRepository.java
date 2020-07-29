@@ -1,7 +1,7 @@
 package ru.netology.domain;
 
 public class AfishaRepository {
-
+    //закоммитил не в ту ветку
     public void findAll() {
 
     }
