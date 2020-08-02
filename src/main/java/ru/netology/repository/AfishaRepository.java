@@ -9,6 +9,7 @@ public class AfishaRepository {
         return movies;
     }
 
+
     public void save(MoviesList movie) {
         int length = movies.length + 1;
         MoviesList[] tmp = new MoviesList[length];
@@ -19,24 +20,23 @@ public class AfishaRepository {
     }
 
     public void findById() {
-
     }
 
     public void removeById(int id) {
-        int length = movies.length -1;
+        int length = movies.length - 1;
         MoviesList[] tmp = new MoviesList[length];
         int index = 0;
         for (MoviesList movie : movies) {
             if (movie.getMovieId() != id) {
                 tmp[index] = movie;
                 index++;
-            }
-            else return;
+            } else return;
         }
         movies = tmp;
     }
 
     public void removeAll() {
-
+        MoviesList[] tmp = new MoviesList[0];
+        movies = tmp;
     }
 }
