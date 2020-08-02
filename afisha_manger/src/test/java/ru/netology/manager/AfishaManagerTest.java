@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import ru.netology.domain.MoviesList;
 import ru.netology.manager.AfishaManager;
 
-import javax.xml.namespace.QName;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
