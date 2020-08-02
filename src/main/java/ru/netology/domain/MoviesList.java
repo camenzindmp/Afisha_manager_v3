@@ -1,4 +1,9 @@
 package ru.netology.domain;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@Data
 
 public class MoviesList {
     private int movieId;
