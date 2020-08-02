@@ -1,21 +1,19 @@
 package ru.netology.manager;
 
-import ru.netology.domain.AfishaRepository;
+
 import ru.netology.domain.MoviesList;
 
 public class AfishaManager {
     private MoviesList[] movies = new MoviesList[0];
-    private AfishaRepository repository;
+    private int quantityInFeed;
+    private int defaultCount = 10;
 
-    public AfishaManager(AfishaRepository repository) {
-        this.repository = repository;
-    }
+
+
 
     public AfishaManager(int quantityInFeed) {
         this.quantityInFeed = quantityInFeed;
     }
-
-    private int quantityInFeed = 10;
 
     public void add(MoviesList movie) {
         int length = movies.length + 1;
@@ -30,6 +28,13 @@ public class AfishaManager {
     }
 
     MoviesList[] getMovies() {
+        if (quantityInFeed < 0) {
+            quantityInFeed = defaultCount;
+        }
+        if (quantityInFeed > movies.length) {
+            quantityInFeed = movies.length;
+        }
+
         MoviesList[] result = new MoviesList[quantityInFeed];
         for (int i = 0; i < quantityInFeed; i++) {
             int index = quantityInFeed - i - 1;
