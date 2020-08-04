@@ -14,7 +14,7 @@ public class AfishaManager {
     public AfishaManager(int quantityInFeed) {  // конструктор, огр. макс. знаечние;
         this.quantityInFeed = quantityInFeed;
     }
-    public AfishaManager(int quantityInFeed, AfishaRepository repository) {
+    public AfishaManager(int quantityInFeed, AfishaRepository repository) { //конструктор с конструктором;
         this.quantityInFeed = quantityInFeed;
         this.repository = repository;
     }

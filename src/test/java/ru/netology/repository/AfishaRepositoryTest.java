@@ -55,7 +55,7 @@ class AfishaRepositoryTest {
 
         repository.findById(soughtId);
 
-        MoviesList[] actual = repository.findById(2);
+        MoviesList[] actual = repository.findById(1);
         MoviesList[] expected = new MoviesList[]{first};
 
         assertArrayEquals(expected, actual);
@@ -63,7 +63,7 @@ class AfishaRepositoryTest {
 
     @Test
     void removeById() {
-        AfishaRepository repository = new AfishaRepository(2);
+        AfishaRepository repository = new AfishaRepository();
         int idToRemove = 1;
 
         repository.removeById(idToRemove);
