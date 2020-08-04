@@ -3,12 +3,12 @@ package ru.netology.repository;
 import ru.netology.domain.MoviesList;
 
 public class AfishaRepository {
+
     private MoviesList[] movies = new MoviesList[0];
 
-    public MoviesList[] findAll() {
+    public MoviesList[] findAll() { // по идее как getAll;
         return movies;
     }
-
 
     public void save(MoviesList movie) {
         int length = movies.length + 1;
@@ -19,18 +19,29 @@ public class AfishaRepository {
         movies = tmp;
     }
 
-    public void findById() {
+    public void findById(int movieId) {
+        int length = movies.length;
+        MoviesList[] tmp = new MoviesList[length];
+        int index = 0;
+        for (MoviesList movie : movies) {
+            if (movie.getMovieId() != movieId) {
+                tmp[index] = movie;
+                index++;
+            }
+            else return;
+        }
+        movies = tmp;
     }
 
-    public void removeById(int id) {
+    public void removeById(int movieId) {
         int length = movies.length - 1;
         MoviesList[] tmp = new MoviesList[length];
         int index = 0;
         for (MoviesList movie : movies) {
-            if (movie.getMovieId() != id) {
+            if (movie.getMovieId() != movieId) {
                 tmp[index] = movie;
                 index++;
-            } else return;
+            }
         }
         movies = tmp;
     }

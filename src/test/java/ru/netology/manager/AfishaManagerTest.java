@@ -77,7 +77,7 @@ public class AfishaManagerTest {
     public void getMoreMovies() {
         AfishaManager manager = new AfishaManager(11);
 
-        MoviesList[] actual = new MoviesList[]{tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
+        MoviesList[] actual = manager.getMovies();
         MoviesList[] expected = new MoviesList[]{tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
 
         assertArrayEquals(expected, actual);
@@ -88,7 +88,7 @@ public class AfishaManagerTest {
         AfishaManager manager = new AfishaManager(-2);
 
 
-        MoviesList[] actual = new MoviesList[]{tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
+        MoviesList[] actual = manager.getMovies();
         MoviesList[] expected = new MoviesList[]{tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
 
         assertArrayEquals(expected, actual);
