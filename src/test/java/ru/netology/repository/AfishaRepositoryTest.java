@@ -48,25 +48,11 @@ class AfishaRepositoryTest {
         assertArrayEquals(expected, actual);
     }
 
-    @Test
-    void findById() {
-        AfishaRepository repository = new AfishaRepository();
-        int soughtId = 1;
-
-        repository.findById(soughtId);
-
-        MoviesList[] actual = repository.findById(1);
-        MoviesList[] expected = new MoviesList[]{first};
-
-        assertArrayEquals(expected, actual);
-    }
 
     @Test
     void removeById() {
         AfishaRepository repository = new AfishaRepository();
         int idToRemove = 1;
-
-        repository.removeById(idToRemove);
 
         MoviesList[] actual = repository.removeById(1);
         MoviesList[] expected = new MoviesList[]{first};
